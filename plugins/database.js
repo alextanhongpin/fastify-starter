@@ -1,6 +1,7 @@
 const fp = require("fastify-plugin");
 const postgres = require("postgres");
 
+// Documentation: https://www.npmjs.com/package/postgres
 const config = () => ({
   host: process.env.DB_HOST,
   port: process.env.DB_PORT,
