@@ -16,6 +16,7 @@
   "author": "alextanhongpin <alextan220990@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "@open-policy-agent/opa-wasm": "^1.1.0",
     "db-migrate": "^0.11.11",
     "db-migrate-pg": "^1.2.2",
     "fastify": "^2.15.1",

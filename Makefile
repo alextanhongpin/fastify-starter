@@ -17,3 +17,6 @@ down:
 
 start:
 	@npm run dev
+
+build-policy:
+	opa build -t wasm -e 'example/hello' ./example.rego
