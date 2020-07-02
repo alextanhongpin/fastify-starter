@@ -5,13 +5,6 @@ module.exports = function(fastify, opts, next) {
     reply.send({ root: true });
   });
 
-  fastify.get("/health", (request, reply) => {
-    reply.send({
-      ok: true,
-      now: Date.now()
-    });
-  });
-
   next();
 };
 

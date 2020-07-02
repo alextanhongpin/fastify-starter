@@ -11,7 +11,8 @@ module.exports = function(fastify, opts, next) {
         200: {
           type: "object",
           properties: {
-            hello: { type: "string" }
+            hello: { type: "string" },
+            sum: { type: "integer" }
           }
         }
       }
@@ -19,8 +20,11 @@ module.exports = function(fastify, opts, next) {
   };
 
   fastify.get("/greet", greetOpts, async (request, reply) => {
+    const [row] = await fastify.sql`SELECT 1 + 1 AS sum`;
+    const { sum } = row;
     return {
-      hello: "world"
+      hello: "world",
+      sum
     };
   });
 
