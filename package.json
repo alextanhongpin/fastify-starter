@@ -9,16 +9,21 @@
   "scripts": {
     "test": "tap test/**/*.test.js",
     "start": "fastify start -l info app.js",
-    "dev": "fastify start -w -l info app.js"
+    "dev": "fastify start -w -l info app.js",
+    "db-migrate": "node_modules/db-migrate/bin/db-migrate"
   },
   "keywords": [],
   "author": "alextanhongpin <alextan220990@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "fastify": "^2.15.0",
+    "db-migrate": "^0.11.11",
+    "db-migrate-pg": "^1.2.2",
+    "fastify": "^2.15.1",
     "fastify-autoload": "^1.2.2",
     "fastify-cli": "^2.0.0",
-    "fastify-plugin": "^1.6.1"
+    "fastify-plugin": "^1.6.1",
+    "ms": "^2.1.2",
+    "postgres": "^1.0.2"
   },
   "devDependencies": {
     "tap": "^14.10.7"
