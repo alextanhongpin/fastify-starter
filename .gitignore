@@ -61,4 +61,11 @@ profile*
 examples/typescript-server.js
 test/types/index.js
 
+# vim generated c-tags
 tags
+
+# environment variables
+.env
+
+# tmp folder
+tmp/
