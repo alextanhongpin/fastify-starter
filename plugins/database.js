@@ -12,8 +12,6 @@ const config = () => ({
   timeout: 0
 });
 
-module.exports = fp(function(fastify, opts, next) {
+module.exports = fp(async function(fastify, opts) {
   fastify.decorate("sql", postgres(config()));
-
-  next();
 });
