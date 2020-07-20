@@ -3,7 +3,7 @@
 const ms = require("ms");
 const startedAt = Date.now();
 
-module.exports = function(fastify, opts, next) {
+module.exports = async function(fastify, opts) {
   const healthOpts = {
     schema: {
       response: {
@@ -24,6 +24,4 @@ module.exports = function(fastify, opts, next) {
       uptime: ms(Date.now() - startedAt)
     };
   });
-
-  next();
 };

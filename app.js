@@ -3,8 +3,13 @@
 const path = require("path");
 const AutoLoad = require("fastify-autoload");
 
-module.exports = function(fastify, opts, next) {
+module.exports = async function(fastify, opts) {
   // Place here your custom code!
+  await fastify.register(require("fastify-express"));
+  fastify.register(require("fastify-helmet"), {
+    hidePoweredBy: { setTo: "PHP 7.0.0" }
+  });
+  fastify.register(require("fastify-cors"));
 
   // Do not touch the following lines
 
@@ -22,7 +27,4 @@ module.exports = function(fastify, opts, next) {
     dir: path.join(__dirname, "services"),
     options: Object.assign({}, opts)
   });
-
-  // Make sure to call next when done
-  next();
 };
