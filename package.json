@@ -19,7 +19,7 @@
     "@open-policy-agent/opa-wasm": "^1.1.0",
     "db-migrate": "^0.11.11",
     "db-migrate-pg": "^1.2.2",
-    "fastify": "^3.1.1",
+    "fastify": "^3.29.4",
     "fastify-autoload": "^3.0.5",
     "fastify-cli": "^2.0.2",
     "fastify-cors": "^4.1.0",
